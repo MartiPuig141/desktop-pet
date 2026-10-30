@@ -1,49 +1,51 @@
 # desktop-pet 🐱
 
-Una mascota d'escriptori interactiva feta amb **Tkinter** (la llibreria gràfica que ve de sèrie amb Python). Un gatet que camina per la pantalla, reacciona als clics, es pot arrossegar, respon a missatges i té un menú de clic dret.
+An interactive desktop pet built with **Tkinter** (Python's built-in GUI library). A little cat that walks around your screen, reacts to clicks, can be dragged, replies to messages and has a right-click menu.
 
-És un **projecte d'aprenentatge**: l'objectiu era posar a prova i reforçar conceptes de Python (funcions, control de flux, esdeveniments) construint alguna cosa visual i divertida. El codi està partit en versions incrementals perquè es vegi com creix pas a pas.
+This is a **learning project**: the goal was to practise and reinforce core Python concepts (functions, control flow, events) by building something visual and fun. The code is split into incremental versions so you can follow how it grows step by step.
 
-## Com executar-ho
+## How to run
 
-Cal Python 3 amb Tkinter (inclòs a la instal·lació estàndard de Python a Windows i macOS; a Linux pot caldre `sudo apt install python3-tk`). No cal instal·lar cap paquet extra.
+Requires Python 3 with Tkinter (included in the standard Python install on Windows and macOS; on Linux you may need `sudo apt install python3-tk`). No extra packages needed.
 
 ```bash
 python3 v5_menu.py
 ```
 
-Cada versió és independent i es pot executar sola per veure l'evolució.
+Each version is standalone and can be run on its own to see the progression.
 
 ## Versions
 
-El projecte s'ha construït afegint **una capacitat per versió**, cada una al seu fitxer:
+The project was built by adding **one capability per version**, each in its own file:
 
-| Fitxer | Què afegeix |
+| File | What it adds |
 |---|---|
-| `v0_finestra.py` | Finestra base amb l'emoji en una posició fixa |
-| `v1_moviment.py` | La mascota camina sola i rebota contra els marges de la pantalla |
-| `v2_clic.py` | Clic: canvia de cara i diu una frase en un globus |
-| `v3_arrossegar.py` | Es pot agafar i moure amb el ratolí |
-| `v4_xat.py` | Clic dret obre un quadre de text; respon segons paraules clau |
-| `v5_menu.py` | Menú de clic dret + finestra sense vores i sempre a sobre (versió final) |
+| `v0_finestra.py` | Base window with the emoji at a fixed position |
+| `v1_moviment.py` | The pet walks on its own and bounces off the screen edges |
+| `v2_clic.py` | Click: changes face and says a phrase in a speech bubble |
+| `v3_arrossegar.py` | Can be grabbed and moved with the mouse |
+| `v4_xat.py` | Right-click opens a text box; replies based on keywords |
+| `v5_menu.py` | Right-click menu + borderless, always-on-top window (final version) |
+
+(Filenames are in Catalan, the author's working language; comments inside the code are Catalan too.)
 
 ## Controls (v5)
 
-- **Clic esquerre** — la mascota reacciona (canvia de cara i diu una frase).
-- **Arrossegar** — agafa-la i mou-la on vulguis.
-- **Clic dret** — obre el menú: "Parla amb mi" (xat) o "Tancar".
+- **Left click** — the pet reacts (changes face and says a phrase).
+- **Drag** — grab it and move it anywhere.
+- **Right click** — opens the menu: "Parla amb mi" (chat) or "Tancar" (quit).
 
-## Tecnologia
+## Tech
 
-Només Python + Tkinter. Sense dependències externes.
+Python + Tkinter only. No external dependencies.
 
-## Estat
+## Status
 
-Projecte d'aprenentatge **funcional** (v0–v5 completes i executables). En millora activa.
+A **working** learning project (v0–v5 complete and runnable). Actively being improved.
 
-### Pendent / roadmap
+### Roadmap
 
-- Distingir el clic net de l'arrossegament (ara el clic esquerre fa les dues coses alhora).
-- Que el globus de diàleg segueixi la mascota mentre camina, en lloc de quedar-se quiet.
-- Treure les frases i les expressions a un fitxer de configuració, en lloc de tenir-les al codi.
-- Sprites dibuixats (Pillow) en lloc d'emojis; guardar l'estat entre execucions (JSON).
+- Tell a plain click apart from a drag (right now a left click does both at once).
+- Make the speech bubble follow the pet while it walks, instead of staying put.
+- Move the phrases and expressions into a config file instead of hardcoding them.
+- Real drawn sprites (Pillow) instead of emojis; persist state between runs (JSON).
